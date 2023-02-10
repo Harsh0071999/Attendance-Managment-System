@@ -1,0 +1,268 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 23, 2021 at 07:22 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `attendancemanagementsystem`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `masterdata`
+--
+
+CREATE TABLE `masterdata` (
+  `id` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL COMMENT '1 - Student\r\n2 - Faculty\r\n3 - Admim',
+  `time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `masterdata`
+--
+
+INSERT INTO `masterdata` (`id`, `name`, `mail`, `pass`, `role`, `time`) VALUES
+('1', 'admin1', 'admin1@gnu.ac.in', 'admin', '3', '0000-00-00 00:00:00'),
+('1001', 'Dharmesh', 'dhamesh.darji@ganpatuniversity.ac.in', 'Darji123', '2', '0000-00-00 00:00:00'),
+('1002', 'UmangS', 'uds01@ganpatuniversity.ac.in', 'Shukla123', '2', '0000-00-00 00:00:00'),
+('1003', 'UmangT', 'urt01@ganpatuniversity.ac.in', 'UmangT123', '2', '0000-00-00 00:00:00'),
+('1004', 'Tejas', 'trk01@ganpatuniversity.ac.in', 'Tejas123', '2', '0000-00-00 00:00:00'),
+('1005', 'Dhaval', 'drs01@ganpatuniversity.ac.in', 'Dhaval123', '2', '0000-00-00 00:00:00'),
+('1006', 'Aniket', 'arp01@ganpatuniversity.ac.in', 'Aniket123', '2', '0000-00-00 00:00:00'),
+('1007', 'Kunal', 'kdg01@ganpatuniversity.ac.in', 'Kunal123', '2', '0000-00-00 00:00:00'),
+('1008', 'Sulabh', 'sgb01@ganpatuniversity.ac.in', 'Sulabh123', '2', '0000-00-00 00:00:00'),
+('1009', 'Jaivik', 'javik@ict.gnu.ac.in', 'Jaivik123', '2', '0000-00-00 00:00:00'),
+('1010', 'Usman', 'usman.sindhi@ganpatuniversity.ac.in', 'Usman123', '2', '0000-00-00 00:00:00'),
+('1109', 'Sagar', 'sagar@gnu.ac.in', '123', '2', '2021-02-13 11:06:58'),
+('1207', 'Hemil Acharya', 'acharyahemil@gmail.com', '123', '1', '2021-02-22 16:11:11'),
+('121212', 'Hemil', 'hemil@gnu.ac.in', '123', '1', '2021-02-22 08:40:56'),
+('121215', 'Hemil Acharya', 'acharyahemil@gmail.com', '123', '1', '2021-02-22 08:44:59'),
+('121507', 'Hemil Acharya', 'acharyahemil@gmail.com', '123', '2', '2021-02-22 13:14:43'),
+('121512', 'Hemil Acharya', 'acharyahemil@gmail.com', '123', '1', '2021-02-22 08:53:18'),
+('150799', 'Hemil', 'hemil@gnu.ac.in', '123456789', '1', '2021-02-13 10:03:31'),
+('151215', 'Hemil Acharya', 'acharyahemil@gmail.com', '123', '1', '2021-02-22 09:21:10'),
+('19162101001', 'AAYUSHI', 'aayushi@gnu.ac.in', 'AAYUSHI123', '1', '0000-00-00 00:00:00'),
+('19162101002', 'SHUBHRA', 'shubhra@gnu.ac.in', 'SHUBHRA123', '1', '0000-00-00 00:00:00'),
+('19162101004', 'KARAN', 'karan@gnu.ac.in', 'KARAN123', '1', '0000-00-00 00:00:00'),
+('19162101005', 'VINIT', 'vinit@gnu.ac.in', 'VINIT123', '1', '0000-00-00 00:00:00'),
+('19162101006', 'BRIJESHKUMAR', 'brijeshkumar@gnu.ac.in', 'BRIJESHKUMAR123', '1', '0000-00-00 00:00:00'),
+('19162101007', 'DRASHTI', 'drashti@gnu.ac.in', 'DRASHTI123', '1', '0000-00-00 00:00:00'),
+('19162101008', 'BHAVEN', 'bhaven@gnu.ac.in', 'BHAVEN123', '1', '0000-00-00 00:00:00'),
+('19162101009', 'DEEPAK', 'deepak@gnu.ac.in', 'DEEPAK123', '1', '0000-00-00 00:00:00'),
+('19162101011', 'GHANISTKUMAR', 'ghanistkumar@gnu.ac.in', 'GHANISTKUMAR123', '1', '0000-00-00 00:00:00'),
+('19162101012', 'JAIVAL', 'jaival@gnu.ac.in', 'JAIVAL123', '1', '0000-00-00 00:00:00'),
+('19162101013', 'KOMALBEN', 'komalben@gnu.ac.in', 'KOMALBEN123', '1', '0000-00-00 00:00:00'),
+('19162101014', 'KASHISH', 'kashish@gnu.ac.in', 'KASHISH123', '1', '0000-00-00 00:00:00'),
+('19162101015', 'MEHUL', 'mehul@gnu.ac.in', 'MEHUL123', '1', '0000-00-00 00:00:00'),
+('19162101016', 'HARIS', 'haris@gnu.ac.in', 'HARIS123', '1', '0000-00-00 00:00:00'),
+('19162101017', 'KUSHAGRA', 'kushagra@gnu.ac.in', 'KUSHAGRA123', '1', '0000-00-00 00:00:00'),
+('19162101019', 'SATVIK', 'satvik@gnu.ac.in', 'SATVIK123', '1', '0000-00-00 00:00:00'),
+('19162101020', 'MUSKAN', 'muskan@gnu.ac.in', 'MUSKAN123', '1', '0000-00-00 00:00:00'),
+('19162101021', 'ARYAN', 'aryan@gnu.ac.in', 'ARYAN123', '1', '0000-00-00 00:00:00'),
+('19162101022', 'AMISHA', 'amisha@gnu.ac.in', 'AMISHA123', '1', '0000-00-00 00:00:00'),
+('19162101023', 'DHAIRYA', 'dhairya@gnu.ac.in', 'DHAIRYA123', '1', '0000-00-00 00:00:00'),
+('19162101024', 'DHRIT', 'dhrit@gnu.ac.in', 'DHRIT123', '1', '0000-00-00 00:00:00'),
+('19162101025', 'SAGAR1', 'sagar1@gnu.ac.in', 'SAGAR123', '1', '0000-00-00 00:00:00'),
+('19162101026', 'KHUSHI', 'khushi@gnu.ac.in', 'KHUSHI123', '1', '0000-00-00 00:00:00'),
+('19162101027', 'PRUTHA', 'prutha@gnu.ac.in', 'PRUTHA123', '1', '0000-00-00 00:00:00'),
+('19162101028', 'SHIVAM', 'shivam@gnu.ac.in', 'SHIVAM123', '1', '0000-00-00 00:00:00'),
+('19162101029', 'ABHAY', 'abhay@gnu.ac.in', 'ABHAY123', '1', '0000-00-00 00:00:00'),
+('19162101030', 'DHANVI', 'dhanvi@gnu.ac.in', 'DHANVI123', '1', '0000-00-00 00:00:00'),
+('19162101031', 'JASH', 'jash@gnu.ac.in', 'JASH123', '1', '0000-00-00 00:00:00'),
+('19162101032', 'ABHAY', 'abhay@gnu.ac.in', 'ABHAY123', '1', '0000-00-00 00:00:00'),
+('19162101033', 'DHRUV', 'dhruv@gnu.ac.in', 'DHRUV123', '1', '0000-00-00 00:00:00'),
+('19162101034', 'YASH', 'yash@gnu.ac.in', 'YASH123', '1', '0000-00-00 00:00:00'),
+('19162101035', 'MEET', 'meet@gnu.ac.in', 'MEET123', '1', '0000-00-00 00:00:00'),
+('19162101036', 'SRIJAN', 'srijan@gnu.ac.in', 'SRIJAN123', '1', '0000-00-00 00:00:00'),
+('19162121001', 'SOHAM', 'soham@gnu.ac.in', 'SOHAM123', '1', '0000-00-00 00:00:00'),
+('19162121002', 'KAVYA', 'kavya@gnu.ac.in', 'KAVYA123', '1', '0000-00-00 00:00:00'),
+('19162121003', 'RAJ', 'raj@gnu.ac.in', 'RAJ123', '1', '0000-00-00 00:00:00'),
+('19162121004', 'DEEP', 'deep@gnu.ac.in', 'DEEP123', '1', '0000-00-00 00:00:00'),
+('19162121005', 'DHRUMIL', 'dhrumil@gnu.ac.in', 'DHRUMIL123', '1', '0000-00-00 00:00:00'),
+('19162121006', 'DISHA', 'disha@gnu.ac.in', 'DISHA123', '1', '0000-00-00 00:00:00'),
+('19162121007', 'MEET', 'meet@gnu.ac.in', 'MEET123', '1', '0000-00-00 00:00:00'),
+('19162121008', 'GEETANJALI', 'geetanjali@gnu.ac.in', 'GEETANJALI123', '1', '0000-00-00 00:00:00'),
+('19162121009', 'HARSH', 'harsh@gnu.ac.in', 'HARSH123', '1', '0000-00-00 00:00:00'),
+('19162121010', 'HEET', 'heet@gnu.ac.in', 'HEET123', '1', '0000-00-00 00:00:00'),
+('19162121011', 'ISHITA', 'ishita@gnu.ac.in', 'ISHITA123', '1', '0000-00-00 00:00:00'),
+('19162121012', 'KAPIL', 'kapil@gnu.ac.in', 'KAPIL123', '1', '0000-00-00 00:00:00'),
+('19162121013', 'JEET', 'jeet@gnu.ac.in', 'JEET123', '1', '0000-00-00 00:00:00'),
+('19162121014', 'ERICA', 'erica@gnu.ac.in', 'ERICA123', '1', '0000-00-00 00:00:00'),
+('19162121015', 'JAYMIN', 'jaymin@gnu.ac.in', 'JAYMIN123', '1', '0000-00-00 00:00:00'),
+('19162121016', 'MANTHAN', 'manthan@gnu.ac.in', 'MANTHAN123', '1', '0000-00-00 00:00:00'),
+('19162121017', 'ANKIT', 'ankit@gnu.ac.in', 'ANKIT123', '1', '0000-00-00 00:00:00'),
+('19162121018', 'DARSHIL', 'darshil@gnu.ac.in', 'DARSHIL123', '1', '0000-00-00 00:00:00'),
+('19162121019', 'DHAIRYA', 'dhairya@gnu.ac.in', 'DHAIRYA123', '1', '0000-00-00 00:00:00'),
+('19162121020', 'FENIL', 'fenil@gnu.ac.in', 'FENIL123', '1', '0000-00-00 00:00:00'),
+('19162121021', 'HETVI', 'hetvi@gnu.ac.in', 'HETVI123', '1', '0000-00-00 00:00:00'),
+('19162121022', 'JENIL', 'jenil@gnu.ac.in', 'JENIL123', '1', '0000-00-00 00:00:00'),
+('19162121023', 'KRINA', 'krina@gnu.ac.in', 'KRINA123', '1', '0000-00-00 00:00:00'),
+('19162121024', 'KUSHAL', 'kushal@gnu.ac.in', 'KUSHAL123', '1', '0000-00-00 00:00:00'),
+('19162121025', 'MAHARSH', 'maharsh@gnu.ac.in', 'MAHARSH123', '1', '0000-00-00 00:00:00'),
+('19162121026', 'MANAV', 'manav@gnu.ac.in', 'MANAV123', '1', '0000-00-00 00:00:00'),
+('19162121027', 'PAREVI', 'parevi@gnu.ac.in', 'PAREVI123', '1', '0000-00-00 00:00:00'),
+('19162121028', 'PAVANKUMAR', 'pavankumar@gnu.ac.in', 'PAVANKUMAR123', '1', '0000-00-00 00:00:00'),
+('19162121029', 'SARTHAK', 'sarthak@gnu.ac.in', 'SARTHAK123', '1', '0000-00-00 00:00:00'),
+('19162121030', 'SMIT', 'smit@gnu.ac.in', 'SMIT123', '1', '0000-00-00 00:00:00'),
+('19162121031', 'SMIT', 'smit@gnu.ac.in', 'SMIT123', '1', '0000-00-00 00:00:00'),
+('19162121032', 'VARUN', 'varun@gnu.ac.in', 'VARUN123', '1', '0000-00-00 00:00:00'),
+('19162121033', 'VIRAJ', 'viraj@gnu.ac.in', 'VIRAJ123', '1', '0000-00-00 00:00:00'),
+('19162121034', 'SHUBHANG', 'shubhang@gnu.ac.in', 'SHUBHANG123', '1', '0000-00-00 00:00:00'),
+('19162121035', 'SOHAM', 'soham@gnu.ac.in', 'SOHAM123', '1', '0000-00-00 00:00:00'),
+('19162121036', 'AKSHAT', 'akshat@gnu.ac.in', 'AKSHAT123', '1', '0000-00-00 00:00:00'),
+('19162121037', 'ASHIL', 'ashil@gnu.ac.in', 'ASHIL123', '1', '0000-00-00 00:00:00'),
+('19162121038', 'DISHWA', 'dishwa@gnu.ac.in', 'DISHWA123', '1', '0000-00-00 00:00:00'),
+('19162121039', 'PARV', 'parv@gnu.ac.in', 'PARV123', '1', '0000-00-00 00:00:00'),
+('19162121041', 'VIDHI', 'vidhi@gnu.ac.in', 'VIDHI123', '1', '0000-00-00 00:00:00'),
+('19162121042', 'JEET', 'jeet@gnu.ac.in', 'JEET123', '1', '0000-00-00 00:00:00'),
+('19162121044', 'SETHIYA', 'sethiya@gnu.ac.in', 'SETHIYA123', '1', '0000-00-00 00:00:00'),
+('19162121045', 'PRIYAL', 'priyal@gnu.ac.in', 'PRIYAL123', '1', '0000-00-00 00:00:00'),
+('19162121046', 'RAKSHITA', 'rakshita@gnu.ac.in', 'RAKSHITA123', '1', '0000-00-00 00:00:00'),
+('19162121047', 'YASH', 'yash@gnu.ac.in', 'YASH123', '1', '0000-00-00 00:00:00'),
+('19162121049', 'SAMIT', 'samit@gnu.ac.in', 'SAMIT123', '1', '0000-00-00 00:00:00'),
+('19162171001', 'ANAND', 'anand@gnu.ac.in', 'ANAND123', '1', '0000-00-00 00:00:00'),
+('19162171002', 'AVAL', 'aval@gnu.ac.in', 'AVAL123', '1', '0000-00-00 00:00:00'),
+('19162171003', 'HARSHIL', 'harshil@gnu.ac.in', 'HARSHIL123', '1', '0000-00-00 00:00:00'),
+('19162171004', 'ANURAG', 'anurag@gnu.ac.in', 'ANURAG123', '1', '0000-00-00 00:00:00'),
+('19162171005', 'AMAAN', 'amaan@gnu.ac.in', 'AMAAN123', '1', '0000-00-00 00:00:00'),
+('19162171006', 'RUDRA', 'rudra@gnu.ac.in', 'RUDRA123', '1', '0000-00-00 00:00:00'),
+('19162171007', 'DHAIRYA1', 'dhairya1@gnu.ac.in', 'DHAIRYA123', '1', '0000-00-00 00:00:00'),
+('19162171008', 'PRAFFUL', 'prafful@gnu.ac.in', 'PRAFFUL123', '1', '0000-00-00 00:00:00'),
+('19162171009', 'DARSH', 'darsh@gnu.ac.in', 'DARSH123', '1', '0000-00-00 00:00:00'),
+('19162171010', 'DHRUVIN', 'dhruvin@gnu.ac.in', 'DHRUVIN123', '1', '0000-00-00 00:00:00'),
+('19162171011', 'DHAIRYA', 'dhairya@gnu.ac.in', 'DHAIRYA123', '1', '0000-00-00 00:00:00'),
+('19162171012', 'GAURAV', 'gaurav@gnu.ac.in', 'GAURAV123', '1', '0000-00-00 00:00:00'),
+('19162171013', 'SHREYA', 'shreya@gnu.ac.in', 'SHREYA123', '1', '0000-00-00 00:00:00'),
+('19162171014', 'JAGIR', 'jagir@gnu.ac.in', 'JAGIR123', '1', '0000-00-00 00:00:00'),
+('19162171015', 'KARAN', 'karan@gnu.ac.in', 'KARAN123', '1', '0000-00-00 00:00:00'),
+('19162171016', 'VIVEKKUMAR', 'vivekkumar@gnu.ac.in', 'VIVEKKUMAR123', '1', '0000-00-00 00:00:00'),
+('19162171017', 'DEVARSH', 'devarsh@gnu.ac.in', 'DEVARSH123', '1', '0000-00-00 00:00:00'),
+('19162171018', 'SHREY', 'shrey@gnu.ac.in', 'SHREY123', '1', '0000-00-00 00:00:00'),
+('19162171019', 'KSHITIJ', 'kshitij@gnu.ac.in', 'KSHITIJ123', '1', '0000-00-00 00:00:00'),
+('19162171020', 'VISHVESH', 'vishvesh@gnu.ac.in', 'VISHVESH123', '1', '0000-00-00 00:00:00'),
+('19162171021', 'MANAV', 'manav@gnu.ac.in', 'MANAV123', '1', '0000-00-00 00:00:00'),
+('19162171022', 'DEEP', 'deep@gnu.ac.in', 'DEEP123', '1', '0000-00-00 00:00:00'),
+('19162171023', 'HARSH', 'harsh@gnu.ac.in', 'HARSH123', '1', '0000-00-00 00:00:00'),
+('19162171024', 'VIDHAN', 'vidhan@gnu.ac.in', 'VIDHAN123', '1', '0000-00-00 00:00:00'),
+('19162171025', 'JAVAL', 'javal@gnu.ac.in', 'JAVAL123', '1', '0000-00-00 00:00:00'),
+('19162171026', 'PRIYA', 'priya@gnu.ac.in', 'PRIYA123', '1', '0000-00-00 00:00:00'),
+('19162171027', 'ARYAN', 'aryan@gnu.ac.in', 'ARYAN123', '1', '0000-00-00 00:00:00'),
+('19162171028', 'DEV', 'dev@gnu.ac.in', 'DEV123', '1', '0000-00-00 00:00:00'),
+('19162171029', 'DEVANSHI', 'devanshi@gnu.ac.in', 'DEVANSHI123', '1', '0000-00-00 00:00:00'),
+('19162171030', 'DHVANI', 'dhvani@gnu.ac.in', 'DHVANI123', '1', '0000-00-00 00:00:00'),
+('19162171031', 'HET', 'het@gnu.ac.in', 'HET123', '1', '0000-00-00 00:00:00'),
+('19162171032', 'MIT', 'mit@gnu.ac.in', 'MIT123', '1', '0000-00-00 00:00:00'),
+('19162171033', 'PRIYANKKUMAR', 'priyankkumar@gnu.ac.in', 'PRIYANKKUMAR123', '1', '0000-00-00 00:00:00'),
+('19162171034', 'RISHABH', 'rishabh@gnu.ac.in', 'RISHABH123', '1', '0000-00-00 00:00:00'),
+('19162171035', 'RAJ', 'raj@gnu.ac.in', 'RAJ123', '1', '0000-00-00 00:00:00'),
+('19162171036', 'YOGESH', 'yogesh@gnu.ac.in', 'YOGESH123', '1', '0000-00-00 00:00:00'),
+('19162171037', 'RUSHIL', 'rushil@gnu.ac.in', 'RUSHIL123', '1', '0000-00-00 00:00:00'),
+('19162171038', 'SANKET1', 'sanket1@gnu.ac.in', 'SANKET123', '1', '0000-00-00 00:00:00'),
+('19162171039', 'AAYUSHI1', 'aayushi1@gnu.ac.in', 'AAYUSHI123', '1', '0000-00-00 00:00:00'),
+('19162171040', 'PANAM', 'panam@gnu.ac.in', 'PANAM123', '1', '0000-00-00 00:00:00'),
+('19162171041', 'ARSLAAN', 'arslaan@gnu.ac.in', 'ARSLAAN123', '1', '0000-00-00 00:00:00'),
+('19162171042', 'SHREYANSH', 'shreyansh@gnu.ac.in', 'SHREYANSH123', '1', '0000-00-00 00:00:00'),
+('19162171043', 'HARSH', 'harsh@gnu.ac.in', 'HARSH123', '1', '0000-00-00 00:00:00'),
+('19162171044', 'NAINESH', 'nainesh@gnu.ac.in', 'NAINESH123', '1', '0000-00-00 00:00:00'),
+('19162171045', 'SANKET', 'sanket@gnu.ac.in', 'SANKET123', '1', '0000-00-00 00:00:00'),
+('19162171046', 'GAGANPRATAPSINGH', 'gaganpratapsingh@gnu.ac.in', 'GAGANPRATAPSINGH123', '1', '0000-00-00 00:00:00'),
+('19162171047', 'VARSHA', 'varsha@gnu.ac.in', 'VARSHA123', '1', '0000-00-00 00:00:00'),
+('19162171048', 'MANAN', 'manan@gnu.ac.in', 'MANAN123', '1', '0000-00-00 00:00:00'),
+('19162171049', 'ACHAL', 'achal@gnu.ac.in', 'ACHAL123', '1', '0000-00-00 00:00:00'),
+('2', 'admin2', 'admin2@gnu.ac.in', 'admin123', '3', '0000-00-00 00:00:00'),
+('20162172001', 'Hemil', 'acharyahemil@gnu.ac.in', '123', '1', '2021-02-13 08:06:00'),
+('202021001', 'HELI', 'heli@gnu.ac.in', 'HELI123', '1', '0000-00-00 00:00:00'),
+('202021002', 'AAKRUTI', 'aakruti@gnu.ac.in', 'AAKRUTI123', '1', '0000-00-00 00:00:00'),
+('202021003', 'PRANAV', 'pranav@gnu.ac.in', 'PRANAV123', '1', '0000-00-00 00:00:00'),
+('202021004', 'MAITRI', 'maitri@gnu.ac.in', 'MAITRI123', '1', '0000-00-00 00:00:00'),
+('202021201', 'HIRAL', 'hiral@gnu.ac.in', 'HIRAL123', '1', '0000-00-00 00:00:00'),
+('202021202', 'ANURAG', 'anurag@gnu.ac.in', 'ANURAG123', '1', '0000-00-00 00:00:00'),
+('202021203', 'JEEL', 'jeel@gnu.ac.in', 'JEEL123', '1', '0000-00-00 00:00:00'),
+('202021205', 'KUSHAL', 'kushal@gnu.ac.in', 'KUSHAL123', '1', '0000-00-00 00:00:00'),
+('202021206', 'YASHASWI', 'yashaswi@gnu.ac.in', 'YASHASWI123', '1', '0000-00-00 00:00:00'),
+('202021207', 'MEHUL1', 'mehul1@gnu.ac.in', 'MEHUL123', '1', '0000-00-00 00:00:00'),
+('202021701', 'HEMIL', 'hemil@gnu.ac.in', 'HEMIL123', '1', '0000-00-00 00:00:00'),
+('202021702', 'SAGAR', 'sagar@gnu.ac.in', 'SAGAR123', '1', '0000-00-00 00:00:00'),
+('202021703', 'PARVA', 'parva@gnu.ac.in', 'PARVA123', '1', '0000-00-00 00:00:00'),
+('202021704', 'JEET', 'jeet@gnu.ac.in', 'JEET123', '1', '0000-00-00 00:00:00'),
+('202021705', 'MRUGANK', 'mrugank@gnu.ac.in', 'MRUGANK123', '1', '0000-00-00 00:00:00'),
+('202021706', 'NEEL', 'neel@gnu.ac.in', 'NEEL123', '1', '0000-00-00 00:00:00'),
+('202021707', 'SAHIL', 'sahil@gnu.ac.in', 'SAHIL123', '1', '0000-00-00 00:00:00'),
+('202021708', 'KUSH', 'kush@gnu.ac.in', 'KUSH123', '1', '0000-00-00 00:00:00'),
+('202021709', 'ROHAN', 'rohan@gnu.ac.in', 'ROHAN123', '1', '0000-00-00 00:00:00'),
+('202021711', 'HARSH', 'harsh@gnu.ac.in', 'HARSH123', '1', '0000-00-00 00:00:00'),
+('3', 'admin3', 'admin3@gnu.ac.in', 'admin123', '3', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentdata`
+--
+
+CREATE TABLE `studentdata` (
+  `id` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `semester` int(255) DEFAULT NULL,
+  `class` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `studentdata`
+--
+
+INSERT INTO `studentdata` (`id`, `name`, `semester`, `class`) VALUES
+('121212', 'Hemil', 0, 'class'),
+('121215', 'Hemil Acharya', 0, 'class'),
+('121512', 'Hemil Acharya', 4, 'A'),
+('151215', 'Hemil Acharya', 4, 'B'),
+('1207', 'Hemil Acharya', 8, 'C');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `masterdata`
+--
+ALTER TABLE `masterdata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `studentdata`
+--
+ALTER TABLE `studentdata`
+  ADD KEY `id` (`id`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `studentdata`
+--
+ALTER TABLE `studentdata`
+  ADD CONSTRAINT `studentdata_ibfk_1` FOREIGN KEY (`id`) REFERENCES `masterdata` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
